@@ -2,7 +2,7 @@
 
 Welcome to **U-Care Bot**, a friendly and safe health query chatbot built with Streamlit and powered by the Mistral-7B-Instruct model via the OpenRouter API. U-Care Bot provides general health information in a clear, empathetic, and patient-friendly manner, ensuring users feel supported while prioritizing safety. 😊
 
-![U-Care Bot Animation](https://assets5.lottiefiles.com/packages/lf20_vpjqyzdt.json)
+![U-Care Bot Animation](https://lottie.host/221c9791-3873-43fc-8960-086d987ac709/OY7Brodiad.json)
 
 ## Features 🌟
 
