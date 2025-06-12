@@ -84,9 +84,7 @@ We welcome contributions to make U-Care Bot even better! To contribute:
 
 Please ensure your changes align with the bot's focus on safety and user-friendliness.
 
-## License 📜
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments 🙏
 
@@ -95,5 +93,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - Built with ❤️ to support users seeking general health information safely.
 
 ---
-
+## Contact
+Email: muhammadusman.becsef22@iba-suk.edu.pk
+Linkedin: www.linkedin.com/in/muhammad-usman-018535253
 **U-Care Bot**: Your friendly health companion! Always consult a doctor for personalized advice. 🩺
