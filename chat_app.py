@@ -62,14 +62,12 @@ def check_unsafe_keywords(query):
     return False
 
 def main():
-    # Set page configuration
     st.set_page_config(
         page_title=" U-Care Bot",
         page_icon="🏥",
         layout="centered"
     )
 
-    # Custom CSS for styling
     st.markdown("""
         <style>
         .main {
@@ -107,7 +105,6 @@ def main():
     """, unsafe_allow_html=True)
     lottie_head = load_lottie_url("https://lottie.host/4a53cdf8-7c6e-4c2d-8143-91f2d6d90133/hl8M1nnwPY.json")
     lottie_health = load_lottie_url("https://lottie.host/221c9791-3873-43fc-8960-086d987ac709/OY7Brodiad.json")
-    # Page title and Lottie animation
     col1, col2 = st.columns([1, 1])
     with col1:
         st.title("U-Care Buddy")
@@ -115,28 +112,25 @@ def main():
         if lottie_head:
             st_lottie(lottie_head, height=100, key="health_animation_header")
     st.markdown("Ask general health questions and get friendly, safe answers! 😊")
-    # Load Lottie animation
     
     if lottie_health:
         st_lottie(lottie_health, height=200, key="health_animation")
 
-    # Initialize session state for chat history
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
 
-    # Display chat history
     st.subheader("Conversation History 📜")
     for chat in st.session_state.chat_history:
         st.markdown(f"<div class='chat-bubble-user'><b>You:</b> {chat['user']}</div>", unsafe_allow_html=True)
         st.markdown(f"<div class='chat-bubble-bot'> {chat['bot']}</div>", unsafe_allow_html=True)
 
-    # Input form
+
     with st.form(key="chat_form", clear_on_submit=True):
         user_query = st.text_input("Your health question:", placeholder="E.g., What causes a sore throat? 🤔")
         submit_button = st.form_submit_button("Ask from U-Care Buddy 🚑")
 
     if submit_button and user_query:
-        # Check for unsafe keywords
+        
         if check_unsafe_keywords(user_query):
             st.error("⚠️ Sorry, your question contains sensitive terms related to serious medical emergencies. Please consult a healthcare professional immediately or contact emergency services.")
         else:
@@ -146,8 +140,6 @@ def main():
                 st.markdown(f"<div class='chat-bubble-user'><b>You:</b> {user_query}</div>", unsafe_allow_html=True)
                 st.markdown(f"<div class='chat-bubble-bot'><b>Health Buddy:</b> {response}</div>", unsafe_allow_html=True)
 
-    # Footer with another Lottie animation
-    
     st.markdown("Made with ❤️ for your health. Always consult a doctor for personalized advice!")
 
 if __name__ == "__main__":
