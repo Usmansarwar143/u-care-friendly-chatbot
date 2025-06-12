@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 from streamlit_lottie import st_lottie
 
-API_KEY = st.secrets["openrouter_key"]
+API_KEY = st.secrets["api"]["openrouter_key"]
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "mistralai/mixtral-8x7b-instruct"
 
